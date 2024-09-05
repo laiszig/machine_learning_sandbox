@@ -38,6 +38,7 @@ Columns in a pandas DataFrame work in much the same way.
 reviews['country'][0]
   ``` 
 
+
 # Indexing in Pandas 🧩
 
 ## Accessor Operators 🔍
@@ -106,4 +107,52 @@ Set Index: Change DataFrame index using set_index().
   # Assign an Iterable:
   reviews['index_backwards'] = range(len(reviews), 0, -1)
   reviews['index_backwards']
+  ```  
+
+# Summary Functions & Maps in Pandas 🧮
+
+## Summary Functions 🔍
+
+  ```python
+# describe(): Provides a high-level summary of the data.
+  reviews.points.describe()      # For numerical data
+  reviews.taster_name.describe() # For string data
+
+# mean(): Get the mean of a column.
+  reviews.points.mean()
+
+# median(): Get the median of a column.
+  reviews.points.median()
+
+# unique(): Get unique values from a column.
+  reviews.taster_name.unique()
+
+# value_counts(): Get unique values and their counts. How often does it appear in the dataset
+  reviews.taster_name.value_counts()
   ```
+
+## Mapping Functions 🔄
+
+- **`map()`**: Apply a function to each element of a Series.
+  ```python
+  review_points_mean = reviews.points.mean()
+  reviews.points.map(lambda p: p - review_points_mean)
+  ```
+- **`apply()`**: Apply a function to each row or column of a DataFrame.
+  ```python
+  def remean_points(row):
+      row.points = row.points - review_points_mean
+      return row
+  reviews.apply(remean_points, axis='columns')
+  ```
+
+- **Built-in Operations**: Faster mappings using operators.
+  ```python
+  # Subtracting the mean from the `points` column:  
+    reviews.points - review_points_mean
+    
+  # Combine `country` and `region_1` data:  
+    reviews.country + " - " + reviews.region_1
+  ```
+
+- **Operators**: Work with all standard Python operators (`>`, `<`, `==`, etc.). More flexible transformations can be done with `map()` or `apply()` if needed.
