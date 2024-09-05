@@ -1,9 +1,0 @@
-id,nome,idade,sexo,peso,manchas,temp,int,est,diagnostico
-4201,joao,28,M,79,concentradas,38.0,2,SP,doente
-3217,maria,18,F,67,inexistentes,39.5,4,MG,doente
-4039,luiz,49,M,92,espalhadas,38.0,2,RS,saudavel
-1920,jose,18,M,43,inexistentes,38.5,8,MG,doente
-4340,claudia,21,F,52,uniformes,37.6,1,PE,saudavel
-2301,ana,22,F,72,inexistentes,38.0,3,RJ,doente
-1322,marta,19,F,87,espalhadas,39.0,6,AM,doente
-3027,paulo,34,M,67,uniformes,38.4,2,GO,saudavel
