@@ -1,0 +1,6 @@
+id,sexo,cirurgia,tsh,tt4,ti,diagnostico
+P1,F,N,6.8,156.2,N,Neg
+P2,F,N,7.3,152.9,S,Neg
+P3,M,S,8.8,148.4,N,HipoPrim
+P4,F,N,6.9,132.7,N,HipoComp
+P5,M,N,5.4,150.9,N,Neg
