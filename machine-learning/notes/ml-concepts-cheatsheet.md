@@ -20,3 +20,4 @@
 - **`Aprendizado Supervisionado`** (Supervised Learning): Usa dados rotulados para treinar o modelo (ex: classificação, regressão).
 - **`Aprendizado Não Supervisionado`** (Unsupervised Learning): Trabalha com dados não rotulados (ex: clusterização).
 - **`Aprendizado por Reforço`** (Reinforcement Learning): O modelo aprende por meio de interação com o ambiente, recebendo recompensas ou penalidades (ex: jogos, controle de robôs).
+
