@@ -10,7 +10,8 @@ Calcula medindo a soma das distancias absolutas ao longo de cada dimensao.
 - **`Uso pratico`**: util em cenarios onde se movem apenas em direcoes ortogonais (como em um sistema de grade, por isso o nome "taxista", ja que a distancia e medida como se fosse percorrida por ruas retas).
 
 ### Distancia supremum (ou distancia de Chebyshev)
-Definida como a maior diferenca absoluta entre as coordenadas correspondentes dos dois pontos. Usada em cenarios onde as variacoes em uma unica dimensao dominam a decisao de proximidade. Nesse caso, o k-NN considera apenas a maior diferenca em uma dimensao entre os pontos, em vez de somar todas as distancias entre as dimensoes.
+Definida como a maior diferenca absoluta entre as coordenadas correspondentes dos dois pontos. Usada em cenarios onde as variacoes em uma unica dimensao dominam a decisao de proximidade. 
+Nesse caso, o k-NN considera apenas a maior diferenca em uma dimensao entre os pontos, em vez de somar todas as distancias entre as dimensoes.
 - **`Robustez`**: A distancia supremum e sensivel apenas a maior variacao entre os pontos, ignorando variacoes menores em outras dimensoes.
 - **`Geometria`**: Em um espaco 2D, a distancia supremum define regioes quadradas, em contraste com a distancia Euclidiana (circular) e Manhattan (diamante).
 
