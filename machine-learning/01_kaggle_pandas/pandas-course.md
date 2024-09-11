@@ -156,3 +156,40 @@ Set Index: Change DataFrame index using set_index().
   ```
 
 - **Operators**: Work with all standard Python operators (`>`, `<`, `==`, etc.). More flexible transformations can be done with `map()` or `apply()` if needed.
+
+# Grouping and Sorting in Pandas 🗂️
+
+## Groupwise Analysis 📊
+
+- **`groupby()`**: Groups data based on column values.
+    ```python
+    reviews.groupby('points').points.count()
+  # To get the cheapest wine: in each points category
+    reviews.groupby('points').price.min()
+  # Selecting the first wine: reviewed from each winery:
+    reviews.groupby('winery').apply(lambda df: df.title.iloc[0])
+  # Best wine by country and province
+    reviews.groupby(['country', 'province']).apply(lambda df: df.loc[df.points.idxmax()])
+  # Multiple functions on DataFrame with `agg()`:
+    reviews.groupby(['country']).price.agg([len, min, max])
+  ```
+## Multi-Indexes 🏷️
+
+- **Multi-index example**:
+  countries_reviewed = reviews.groupby(['country', 'province']).description.agg([len])
+
+- Convert multi-index back to a regular index:
+  countries_reviewed.reset_index()
+
+## Sorting Data 🔀
+
+- **`sort_values()`** by specific columns:
+  ```python
+    countries_reviewed.sort_values(by='len')
+  # Descending sort:
+    countries_reviewed.sort_values(by='len', ascending=False)
+  # Sort by index values:
+    countries_reviewed.sort_index()
+  # Sort by multiple columns**:
+    countries_reviewed.sort_values(by=['country', 'len'])
+  ```
