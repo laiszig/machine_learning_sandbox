@@ -1,27 +1,33 @@
-KNN - K Nearest Neighbors, is one of the simplest Supervised ML algorithms mostly used for:
-- Classification (It classifies a data point based on how its neighbors are classified)
-- It stores all available cases and classifies new cases based on a similarity measure
-- k in KNN is a parameter that refers to the number of nearest neighbors to include in the majority voting process
+# 🌟 KNN - K Nearest Neighbors 🌟
 
-KNN Algorithm is based on feature similarity: Choosing the right value of k is a process called parameter tuning, and is important for better accuracy.
+KNN is one of the simplest **Supervised ML algorithms**, commonly used for:
 
-How to choose a value for K:
-- Sqrt(n), where n is the total number of data points
-- Odd value of K is selected to avoid confusion between two classes of data
+- 🏷 **Classification** (It classifies a data point based on how its neighbors are classified)
+- 💾 It stores all available cases and classifies new ones based on a **similarity measure**
+- 🔢 **k** in KNN refers to the number of nearest neighbors considered in the majority voting process
 
-We can use KNN when:
-- Data is labeled
-- Data is noise free
-- Dataset is small
-KNN is a lazy learner. It doesn't learn a discriminative function from the training set.
+## KNN Algorithm 🧠
+KNN is based on **feature similarity**. Choosing the right value of **k** is called **parameter tuning** and is key for better accuracy. 🎯
 
-How dos the KNN algorithm work?
-- We use the Euclidean distance to calculate the nearest neighbors. (find out who are the nearest neighbors)
-- According to the Euclidean distance formula, the distance between two points in the plane with coordinates (x, y) and (a, b) is given by:
-dist(d) = sqrt{(q_1 - p_1)^2 + (q_2 - p_2)^2}
+### How to choose a value for **K**:
+- 🧮 **Sqrt(n)**, where **n** is the total number of data points
+- 🔀 Choose an **odd** value of **K** to avoid confusion between two classes of data
 
-Recap
-1. A positive integer k is specified, along with a new sample
-2. We select the k entries in our database which are closest to the new sample
-3. We find the most common classification of these entries
-4. This is the classification we give to the new sample
+### When to use KNN? 🤔
+- 🏷 **Data is labeled**
+- 🔇 **Data is noise-free**
+- 📊 **Dataset is small**
+
+**Note:** KNN is a lazy learner. 💤 It doesn't learn a function from the training set but instead memorizes the data!
+
+## How does the KNN algorithm work? 🛠
+- We use the **Euclidean distance** to calculate the nearest neighbors 👥.
+- According to the **Euclidean distance formula**, the distance between two points in the plane with coordinates (x, y) and (a, b) is:
+dist(d) = sqrt{(q₁ - p₁)² + (q₂ - p₂)²}
+
+## Recap 🎓
+1. 🔢 A positive integer **k** is specified, along with a new sample.
+2. 🔍 We select the **k entries** in our database that are closest to the new sample.
+3. 🏆 We find the most common classification among these entries.
+4. 📝 This classification is assigned to the new sample!
+
