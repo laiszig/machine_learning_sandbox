@@ -16,7 +16,12 @@ We can use KNN when:
 KNN is a lazy learner. It doesn't learn a discriminative function from the training set.
 
 How dos the KNN algorithm work?
-- We use the Euclidean distance to calculate the nearest neighbors.
+- We use the Euclidean distance to calculate the nearest neighbors. (find out who are the nearest neighbors)
 - According to the Euclidean distance formula, the distance between two points in the plane with coordinates (x, y) and (a, b) is given by:
 dist(d) = sqrt{(q_1 - p_1)^2 + (q_2 - p_2)^2}
 
+Recap
+1. A positive integer k is specified, along with a new sample
+2. We select the k entries in our database which are closest to the new sample
+3. We find the most common classification of these entries
+4. This is the classification we give to the new sample
