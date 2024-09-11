@@ -190,6 +190,6 @@ Set Index: Change DataFrame index using set_index().
     countries_reviewed.sort_values(by='len', ascending=False)
   # Sort by index values:
     countries_reviewed.sort_index()
-  # Sort by multiple columns**:
+  # Sort by multiple columns:
     countries_reviewed.sort_values(by=['country', 'len'])
   ```
