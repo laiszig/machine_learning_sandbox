@@ -193,3 +193,35 @@ Set Index: Change DataFrame index using set_index().
   # Sort by multiple columns:
     countries_reviewed.sort_values(by=['country', 'len'])
   ```
+# Data Types and Missing Values in Pandas 🧮
+
+## Data Types (dtypes)
+
+  ```python
+  # Get the data type** for a specific column:
+    reviews.price.dtype
+  # Get data types for all columns**:
+    reviews.dtypes
+  ```
+**Object type**: Columns with entirely string data are stored as `object` type.
+
+  ```python
+  # Convert data type using astype():
+  reviews.points.astype('float64')
+  #Get the dtype of the index:
+  reviews.index.dtype
+  ```
+- **Pandas supports**: Categorical and timeseries data.
+
+## Missing Data 🕳️
+
+Missing values are represented by **NaN** (Not a Number) with `float64` dtype.
+
+  ```python
+  # Select NaN entries:
+  reviews[pd.isnull(reviews.country)]
+  # Replace missing values** using `fillna()`:
+  reviews.region_2.fillna("Unknown")
+  # Replace specific values** with `replace()`:
+  reviews.taster_twitter_handle.replace("@kerinokeefe", "@kerino")
+  ```
