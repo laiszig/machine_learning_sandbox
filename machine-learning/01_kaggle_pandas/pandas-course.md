@@ -225,3 +225,35 @@ Missing values are represented by **NaN** (Not a Number) with `float64` dtype.
   # Replace specific values** with `replace()`:
   reviews.taster_twitter_handle.replace("@kerinokeefe", "@kerino")
   ```
+
+# Renaming and Combining in Pandas 📋
+
+## Renaming
+
+  ```python
+  # Rename columns using `rename()`:
+  reviews.rename(columns={'points':'score'})
+  # Rename index values with `index` keyword:
+  reviews.rename(index={0: 'firstEntry', 1: 'secondEntry'})
+  # For row indexes, `set_index()` is more convenient for naming:
+  reviews.set_index('new_index_column')
+  # Rename axis labels** (both rows and columns) using `rename_axis()`:
+  reviews.rename_axis("wines", axis='rows').rename_axis("fields", axis='columns')
+  ```
+## Combining DataFrames
+
+Pandas provides three main methods for combining data: `concat()`, `join()`, and `merge()`.
+
+### concat()
+  ```python
+  # Concatenate DataFrames**:
+  pd.concat([canadian_youtube, british_youtube])
+  ```
+### join()
+  ```python
+  # Join DataFrames on shared index**:
+  left = canadian_youtube.set_index(['title', 'trending_date'])  
+  right = british_youtube.set_index(['title', 'trending_date'])  
+  left.join(right, lsuffix='_CAN', rsuffix='_UK')
+  ```
+- Use `lsuffix` and `rsuffix` to distinguish between columns with the same name.
