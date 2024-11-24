@@ -6,8 +6,8 @@
    "metadata": {
     "collapsed": true,
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.798754Z",
-     "start_time": "2024-11-08T17:06:04.736591Z"
+     "end_time": "2024-11-24T17:10:47.178326Z",
+     "start_time": "2024-11-24T17:10:46.607183Z"
     }
    },
    "source": [
@@ -34,13 +34,13 @@
     "from sklearn.metrics import accuracy_score, recall_score, f1_score, roc_curve, roc_auc_score, auc"
    ],
    "outputs": [],
-   "execution_count": 51
+   "execution_count": 1
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.695557100Z",
-     "start_time": "2024-11-07T19:15:09.735935Z"
+     "end_time": "2024-11-24T17:10:47.265806Z",
+     "start_time": "2024-11-24T17:10:47.193885Z"
     }
    },
    "cell_type": "code",
@@ -79,40 +79,40 @@
      "data": {
       "text/plain": [
        "    IDpassageiro                Nome Deck  NumeroCabine PosicaoCabine  \\\n",
-       "312      3653_01    Ally Thonyderson    G           727             S   \n",
-       "614      6746_01      Luison Mcinton    H           933             S   \n",
-       "586      1365_01     Alkeson Exnutch    G           983             S   \n",
-       "165      2929_01     Alancy Mcbritts    A           213             P   \n",
-       "360      7981_02  Shanie Paulllegory    E            25             S   \n",
-       "775      0482_02     Isaacy Mallerez    H            89             S   \n",
-       "376      4219_01           Unfly Min    B           629             P   \n",
-       "651      8729_01      Alhaino Rewmid    D          1277             S   \n",
-       "983      7175_01       Lulah Ramoran    H          1234             P   \n",
-       "462      6047_01       Sanney Russon    F           579             S   \n",
+       "808      5950_01  Therry Fowlesterez    E           721             S   \n",
+       "653      4690_01   Mediah Dishocatal    E           382             P   \n",
+       "671      2043_01         Goles Teake    D          1202             P   \n",
+       "738      8836_02       Jeron Mcinton    H           363             P   \n",
+       "410      8210_01            Crat Ble    F          1275             S   \n",
+       "75       2647_01      Janney Johnsby    D           413             P   \n",
+       "798      3095_01        Aarjel Rhuba    G          1327             P   \n",
+       "873      8812_01            Bar Part    H           603             P   \n",
+       "344      4801_01         Vana Brooke    D           259             S   \n",
+       "401      5700_01        Coreen Ricks    C             2             S   \n",
        "\n",
-       "    Procedencia  Destino  Idade    VIP  AllInclusive  ServicoCabine  \\\n",
-       "312      Brazil    China     12   True          True            552   \n",
-       "614      France    China     64  False          True            717   \n",
-       "586       China   Brazil     56  False          True           1262   \n",
-       "165   Indonesia    China     45   True         False            928   \n",
-       "360      Angola  Nigeria     43   True          True           1623   \n",
-       "775       China     Peru     26   True         False            369   \n",
-       "376     Armenia   France     24  False          True            512   \n",
-       "651       Japan    China     75  False         False            309   \n",
-       "983      Canada   Poland     62   True          True            205   \n",
-       "462       China    China     26  False         False            656   \n",
+       "    Procedencia      Destino  Idade    VIP  AllInclusive  ServicoCabine  \\\n",
+       "808       China        Egypt      9  False         False            181   \n",
+       "653      Norway    Indonesia      8   True         False           1601   \n",
+       "671      Poland     Portugal     36  False         False            891   \n",
+       "738    Thailand      Nigeria     52   True          True           1278   \n",
+       "410      Sweden       Brazil     46   True         False           1193   \n",
+       "75        China       Russia      1   True          True             11   \n",
+       "798      Russia        Egypt     64   True          True             59   \n",
+       "873   Argentina  Philippines      1   True          True            123   \n",
+       "344      Russia    Indonesia     51   True          True            995   \n",
+       "401      Sweden        China     57  False         False            123   \n",
        "\n",
        "     Restaurante  Shopping   SPA  ParquedeAguas  Sobrevivente  \n",
-       "312          252      5153   492            311          True  \n",
-       "614          240      5124  1360            476          True  \n",
-       "586          264      1033   246             50          True  \n",
-       "165         1422      6419  2582            541          True  \n",
-       "360         1362      6988    81            444         False  \n",
-       "775          953     12911  1681            175          True  \n",
-       "376          193     12801  1968            578          True  \n",
-       "651          942      3166  2603            265         False  \n",
-       "983          611      5558  2004             56         False  \n",
-       "462          564     14017  2391            357         False  "
+       "808         1122      9018   743            426         False  \n",
+       "653         1198     14295  2559            581         False  \n",
+       "671          367      6989   427            325          True  \n",
+       "738          251      1377  2924            247         False  \n",
+       "410         1292     14464   381            334          True  \n",
+       "75           782     15008  1867            518         False  \n",
+       "798          588      1979  1057            170         False  \n",
+       "873          481     13807  2455            162         False  \n",
+       "344          393     15225   386            322          True  \n",
+       "401          347     11464    35            204          True  "
       ],
       "text/html": [
        "<div>\n",
@@ -153,212 +153,212 @@
        "  </thead>\n",
        "  <tbody>\n",
        "    <tr>\n",
-       "      <th>312</th>\n",
-       "      <td>3653_01</td>\n",
-       "      <td>Ally Thonyderson</td>\n",
-       "      <td>G</td>\n",
-       "      <td>727</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Brazil</td>\n",
-       "      <td>China</td>\n",
-       "      <td>12</td>\n",
-       "      <td>True</td>\n",
-       "      <td>True</td>\n",
-       "      <td>552</td>\n",
-       "      <td>252</td>\n",
-       "      <td>5153</td>\n",
-       "      <td>492</td>\n",
-       "      <td>311</td>\n",
-       "      <td>True</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>614</th>\n",
-       "      <td>6746_01</td>\n",
-       "      <td>Luison Mcinton</td>\n",
-       "      <td>H</td>\n",
-       "      <td>933</td>\n",
-       "      <td>S</td>\n",
-       "      <td>France</td>\n",
-       "      <td>China</td>\n",
-       "      <td>64</td>\n",
-       "      <td>False</td>\n",
-       "      <td>True</td>\n",
-       "      <td>717</td>\n",
-       "      <td>240</td>\n",
-       "      <td>5124</td>\n",
-       "      <td>1360</td>\n",
-       "      <td>476</td>\n",
-       "      <td>True</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>586</th>\n",
-       "      <td>1365_01</td>\n",
-       "      <td>Alkeson Exnutch</td>\n",
-       "      <td>G</td>\n",
-       "      <td>983</td>\n",
-       "      <td>S</td>\n",
-       "      <td>China</td>\n",
-       "      <td>Brazil</td>\n",
-       "      <td>56</td>\n",
-       "      <td>False</td>\n",
-       "      <td>True</td>\n",
-       "      <td>1262</td>\n",
-       "      <td>264</td>\n",
-       "      <td>1033</td>\n",
-       "      <td>246</td>\n",
-       "      <td>50</td>\n",
-       "      <td>True</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>165</th>\n",
-       "      <td>2929_01</td>\n",
-       "      <td>Alancy Mcbritts</td>\n",
-       "      <td>A</td>\n",
-       "      <td>213</td>\n",
-       "      <td>P</td>\n",
-       "      <td>Indonesia</td>\n",
-       "      <td>China</td>\n",
-       "      <td>45</td>\n",
-       "      <td>True</td>\n",
-       "      <td>False</td>\n",
-       "      <td>928</td>\n",
-       "      <td>1422</td>\n",
-       "      <td>6419</td>\n",
-       "      <td>2582</td>\n",
-       "      <td>541</td>\n",
-       "      <td>True</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>360</th>\n",
-       "      <td>7981_02</td>\n",
-       "      <td>Shanie Paulllegory</td>\n",
+       "      <th>808</th>\n",
+       "      <td>5950_01</td>\n",
+       "      <td>Therry Fowlesterez</td>\n",
        "      <td>E</td>\n",
-       "      <td>25</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Angola</td>\n",
-       "      <td>Nigeria</td>\n",
-       "      <td>43</td>\n",
-       "      <td>True</td>\n",
-       "      <td>True</td>\n",
-       "      <td>1623</td>\n",
-       "      <td>1362</td>\n",
-       "      <td>6988</td>\n",
-       "      <td>81</td>\n",
-       "      <td>444</td>\n",
-       "      <td>False</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>775</th>\n",
-       "      <td>0482_02</td>\n",
-       "      <td>Isaacy Mallerez</td>\n",
-       "      <td>H</td>\n",
-       "      <td>89</td>\n",
+       "      <td>721</td>\n",
        "      <td>S</td>\n",
        "      <td>China</td>\n",
-       "      <td>Peru</td>\n",
-       "      <td>26</td>\n",
-       "      <td>True</td>\n",
+       "      <td>Egypt</td>\n",
+       "      <td>9</td>\n",
        "      <td>False</td>\n",
-       "      <td>369</td>\n",
-       "      <td>953</td>\n",
-       "      <td>12911</td>\n",
-       "      <td>1681</td>\n",
-       "      <td>175</td>\n",
-       "      <td>True</td>\n",
+       "      <td>False</td>\n",
+       "      <td>181</td>\n",
+       "      <td>1122</td>\n",
+       "      <td>9018</td>\n",
+       "      <td>743</td>\n",
+       "      <td>426</td>\n",
+       "      <td>False</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>376</th>\n",
-       "      <td>4219_01</td>\n",
-       "      <td>Unfly Min</td>\n",
-       "      <td>B</td>\n",
-       "      <td>629</td>\n",
+       "      <th>653</th>\n",
+       "      <td>4690_01</td>\n",
+       "      <td>Mediah Dishocatal</td>\n",
+       "      <td>E</td>\n",
+       "      <td>382</td>\n",
        "      <td>P</td>\n",
-       "      <td>Armenia</td>\n",
-       "      <td>France</td>\n",
-       "      <td>24</td>\n",
+       "      <td>Norway</td>\n",
+       "      <td>Indonesia</td>\n",
+       "      <td>8</td>\n",
+       "      <td>True</td>\n",
        "      <td>False</td>\n",
-       "      <td>True</td>\n",
-       "      <td>512</td>\n",
-       "      <td>193</td>\n",
-       "      <td>12801</td>\n",
-       "      <td>1968</td>\n",
-       "      <td>578</td>\n",
-       "      <td>True</td>\n",
+       "      <td>1601</td>\n",
+       "      <td>1198</td>\n",
+       "      <td>14295</td>\n",
+       "      <td>2559</td>\n",
+       "      <td>581</td>\n",
+       "      <td>False</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>651</th>\n",
-       "      <td>8729_01</td>\n",
-       "      <td>Alhaino Rewmid</td>\n",
+       "      <th>671</th>\n",
+       "      <td>2043_01</td>\n",
+       "      <td>Goles Teake</td>\n",
        "      <td>D</td>\n",
-       "      <td>1277</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Japan</td>\n",
-       "      <td>China</td>\n",
-       "      <td>75</td>\n",
-       "      <td>False</td>\n",
-       "      <td>False</td>\n",
-       "      <td>309</td>\n",
-       "      <td>942</td>\n",
-       "      <td>3166</td>\n",
-       "      <td>2603</td>\n",
-       "      <td>265</td>\n",
-       "      <td>False</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>983</th>\n",
-       "      <td>7175_01</td>\n",
-       "      <td>Lulah Ramoran</td>\n",
-       "      <td>H</td>\n",
-       "      <td>1234</td>\n",
+       "      <td>1202</td>\n",
        "      <td>P</td>\n",
-       "      <td>Canada</td>\n",
        "      <td>Poland</td>\n",
-       "      <td>62</td>\n",
+       "      <td>Portugal</td>\n",
+       "      <td>36</td>\n",
+       "      <td>False</td>\n",
+       "      <td>False</td>\n",
+       "      <td>891</td>\n",
+       "      <td>367</td>\n",
+       "      <td>6989</td>\n",
+       "      <td>427</td>\n",
+       "      <td>325</td>\n",
+       "      <td>True</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>738</th>\n",
+       "      <td>8836_02</td>\n",
+       "      <td>Jeron Mcinton</td>\n",
+       "      <td>H</td>\n",
+       "      <td>363</td>\n",
+       "      <td>P</td>\n",
+       "      <td>Thailand</td>\n",
+       "      <td>Nigeria</td>\n",
+       "      <td>52</td>\n",
        "      <td>True</td>\n",
        "      <td>True</td>\n",
-       "      <td>205</td>\n",
-       "      <td>611</td>\n",
-       "      <td>5558</td>\n",
-       "      <td>2004</td>\n",
-       "      <td>56</td>\n",
+       "      <td>1278</td>\n",
+       "      <td>251</td>\n",
+       "      <td>1377</td>\n",
+       "      <td>2924</td>\n",
+       "      <td>247</td>\n",
        "      <td>False</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>462</th>\n",
-       "      <td>6047_01</td>\n",
-       "      <td>Sanney Russon</td>\n",
+       "      <th>410</th>\n",
+       "      <td>8210_01</td>\n",
+       "      <td>Crat Ble</td>\n",
        "      <td>F</td>\n",
-       "      <td>579</td>\n",
+       "      <td>1275</td>\n",
        "      <td>S</td>\n",
+       "      <td>Sweden</td>\n",
+       "      <td>Brazil</td>\n",
+       "      <td>46</td>\n",
+       "      <td>True</td>\n",
+       "      <td>False</td>\n",
+       "      <td>1193</td>\n",
+       "      <td>1292</td>\n",
+       "      <td>14464</td>\n",
+       "      <td>381</td>\n",
+       "      <td>334</td>\n",
+       "      <td>True</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>75</th>\n",
+       "      <td>2647_01</td>\n",
+       "      <td>Janney Johnsby</td>\n",
+       "      <td>D</td>\n",
+       "      <td>413</td>\n",
+       "      <td>P</td>\n",
        "      <td>China</td>\n",
+       "      <td>Russia</td>\n",
+       "      <td>1</td>\n",
+       "      <td>True</td>\n",
+       "      <td>True</td>\n",
+       "      <td>11</td>\n",
+       "      <td>782</td>\n",
+       "      <td>15008</td>\n",
+       "      <td>1867</td>\n",
+       "      <td>518</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>798</th>\n",
+       "      <td>3095_01</td>\n",
+       "      <td>Aarjel Rhuba</td>\n",
+       "      <td>G</td>\n",
+       "      <td>1327</td>\n",
+       "      <td>P</td>\n",
+       "      <td>Russia</td>\n",
+       "      <td>Egypt</td>\n",
+       "      <td>64</td>\n",
+       "      <td>True</td>\n",
+       "      <td>True</td>\n",
+       "      <td>59</td>\n",
+       "      <td>588</td>\n",
+       "      <td>1979</td>\n",
+       "      <td>1057</td>\n",
+       "      <td>170</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>873</th>\n",
+       "      <td>8812_01</td>\n",
+       "      <td>Bar Part</td>\n",
+       "      <td>H</td>\n",
+       "      <td>603</td>\n",
+       "      <td>P</td>\n",
+       "      <td>Argentina</td>\n",
+       "      <td>Philippines</td>\n",
+       "      <td>1</td>\n",
+       "      <td>True</td>\n",
+       "      <td>True</td>\n",
+       "      <td>123</td>\n",
+       "      <td>481</td>\n",
+       "      <td>13807</td>\n",
+       "      <td>2455</td>\n",
+       "      <td>162</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>344</th>\n",
+       "      <td>4801_01</td>\n",
+       "      <td>Vana Brooke</td>\n",
+       "      <td>D</td>\n",
+       "      <td>259</td>\n",
+       "      <td>S</td>\n",
+       "      <td>Russia</td>\n",
+       "      <td>Indonesia</td>\n",
+       "      <td>51</td>\n",
+       "      <td>True</td>\n",
+       "      <td>True</td>\n",
+       "      <td>995</td>\n",
+       "      <td>393</td>\n",
+       "      <td>15225</td>\n",
+       "      <td>386</td>\n",
+       "      <td>322</td>\n",
+       "      <td>True</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>401</th>\n",
+       "      <td>5700_01</td>\n",
+       "      <td>Coreen Ricks</td>\n",
+       "      <td>C</td>\n",
+       "      <td>2</td>\n",
+       "      <td>S</td>\n",
+       "      <td>Sweden</td>\n",
        "      <td>China</td>\n",
-       "      <td>26</td>\n",
+       "      <td>57</td>\n",
        "      <td>False</td>\n",
        "      <td>False</td>\n",
-       "      <td>656</td>\n",
-       "      <td>564</td>\n",
-       "      <td>14017</td>\n",
-       "      <td>2391</td>\n",
-       "      <td>357</td>\n",
-       "      <td>False</td>\n",
+       "      <td>123</td>\n",
+       "      <td>347</td>\n",
+       "      <td>11464</td>\n",
+       "      <td>35</td>\n",
+       "      <td>204</td>\n",
+       "      <td>True</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
        "</div>"
       ]
      },
-     "execution_count": 27,
+     "execution_count": 2,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "execution_count": 27
+   "execution_count": 2
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.697554400Z",
-     "start_time": "2024-11-07T19:15:09.830806Z"
+     "end_time": "2024-11-24T17:10:47.900592Z",
+     "start_time": "2024-11-24T17:10:47.892724Z"
     }
    },
    "cell_type": "code",
@@ -398,13 +398,13 @@
      ]
     }
    ],
-   "execution_count": 28
+   "execution_count": 3
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.697554400Z",
-     "start_time": "2024-11-07T19:15:09.950817Z"
+     "end_time": "2024-11-24T17:10:48.021542Z",
+     "start_time": "2024-11-24T17:10:48.004572Z"
     }
    },
    "cell_type": "code",
@@ -551,18 +551,18 @@
        "</div>"
       ]
      },
-     "execution_count": 29,
+     "execution_count": 4,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "execution_count": 29
+   "execution_count": 4
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.698555500Z",
-     "start_time": "2024-11-07T19:15:10.071306Z"
+     "end_time": "2024-11-24T17:10:48.192312Z",
+     "start_time": "2024-11-24T17:10:48.183945Z"
     }
    },
    "cell_type": "code",
@@ -737,18 +737,18 @@
        "</div>"
       ]
      },
-     "execution_count": 30,
+     "execution_count": 5,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "execution_count": 30
+   "execution_count": 5
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.698555500Z",
-     "start_time": "2024-11-07T19:15:10.187873Z"
+     "end_time": "2024-11-24T17:10:48.295859Z",
+     "start_time": "2024-11-24T17:10:48.289341Z"
     }
    },
    "cell_type": "code",
@@ -780,18 +780,18 @@
        "dtype: int64"
       ]
      },
-     "execution_count": 31,
+     "execution_count": 6,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "execution_count": 31
+   "execution_count": 6
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.698555500Z",
-     "start_time": "2024-11-07T19:15:10.314591Z"
+     "end_time": "2024-11-24T17:10:48.562723Z",
+     "start_time": "2024-11-24T17:10:48.557668Z"
     }
    },
    "cell_type": "code",
@@ -807,18 +807,18 @@
        "(1000, 16)"
       ]
      },
-     "execution_count": 32,
+     "execution_count": 7,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "execution_count": 32
+   "execution_count": 7
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.698555500Z",
-     "start_time": "2024-11-07T19:15:10.465225Z"
+     "end_time": "2024-11-24T17:10:48.833767Z",
+     "start_time": "2024-11-24T17:10:48.824731Z"
     }
    },
    "cell_type": "code",
@@ -831,41 +831,41 @@
     {
      "data": {
       "text/plain": [
-       "    IDpassageiro            Nome Deck  NumeroCabine PosicaoCabine  \\\n",
-       "247      2007_01   Aviton Gocent    G          1327             P   \n",
-       "455      9129_01  Hardy Graneyes    H           487             P   \n",
-       "939      8687_01    Annon Cartiz    C           335             P   \n",
-       "995      6802_01   Eleb Disteady    G          1310             S   \n",
-       "254      0689_01    Chard Motive    F          1241             S   \n",
-       "483      4885_01      Jagles Bre    B           567             S   \n",
-       "359      3641_02   Lilasa Powery    D           103             P   \n",
-       "214      8175_01  Terope Geraing    H          1226             P   \n",
-       "868      0255_01  Ashir Mingious    D           941             S   \n",
-       "443      1353_02     Beant Tepie    E          1295             P   \n",
+       "    IDpassageiro                Nome Deck  NumeroCabine PosicaoCabine  \\\n",
+       "80       4977_02         Nicey Merce    B            62             S   \n",
+       "318      4001_05   Brancy Lowelliott    C           975             S   \n",
+       "538      2798_01   Furudra Timleplet    D           662             S   \n",
+       "425      3040_01         Nilly Purle    A          1057             P   \n",
+       "712      5097_01  Hughan Peterstarks    H           663             P   \n",
+       "339      1323_01     Jilla Gamberson    A           589             S   \n",
+       "435      0863_02      Lynez Walkerez    B           221             S   \n",
+       "141      4246_01  Isaacy Hamberterry    D          1358             P   \n",
+       "175      3000_01   Therta Spencervan    F           393             S   \n",
+       "75       2647_01      Janney Johnsby    D           413             P   \n",
        "\n",
-       "                Procedencia  Destino  Idade    VIP  AllInclusive  \\\n",
-       "247                Pakistan    China     79   True          True   \n",
-       "455             Philippines    China     50  False         False   \n",
-       "939                   China   Canada     39  False          True   \n",
-       "995  Bosnia and Herzegovina   Brazil     61   True          True   \n",
-       "254                 Ecuador   Greece     35  False         False   \n",
-       "483               Nicaragua  Vietnam     25   True         False   \n",
-       "359                 Ukraine   France     13   True         False   \n",
-       "214                  Latvia   Russia     54   True         False   \n",
-       "868                 Nigeria  Germany     50  False          True   \n",
-       "443                   China   Poland     18   True         False   \n",
+       "       Procedencia      Destino  Idade    VIP  AllInclusive  ServicoCabine  \\\n",
+       "80          Sweden    Indonesia     39  False         False           1293   \n",
+       "318         Canada     Portugal     58   True          True           1063   \n",
+       "538         Russia       Brazil     52   True         False           1411   \n",
+       "425  United States  Philippines     61   True         False            844   \n",
+       "712         Mexico       Mexico     21   True          True            253   \n",
+       "339        Nigeria        Ghana     49  False         False            185   \n",
+       "435      Indonesia        China      6   True          True           1495   \n",
+       "141          China    Indonesia     58   True          True            770   \n",
+       "175          China        China     22   True         False            581   \n",
+       "75           China       Russia      1   True          True             11   \n",
        "\n",
-       "     ServicoCabine  Restaurante  Shopping   SPA  ParquedeAguas  Sobrevivente  \n",
-       "247            518          133      8354   951            666          True  \n",
-       "455            144          556     13752   789            664          True  \n",
-       "939           1554          918      1162   144              0         False  \n",
-       "995           1569          106      8090  2915            680          True  \n",
-       "254           1101          406     11734  1212            375          True  \n",
-       "483           1463           34      3320   280            431          True  \n",
-       "359           1276          479     10598  2927            659          True  \n",
-       "214            574          301     14041   929            166          True  \n",
-       "868           1155         1156     12846  1180            426          True  \n",
-       "443            903          738      1666  1843            596         False  "
+       "     Restaurante  Shopping   SPA  ParquedeAguas  Sobrevivente  \n",
+       "80           379      8770  2106            508         False  \n",
+       "318          249      6181  2240             85          True  \n",
+       "538           28      1404  1152             97          True  \n",
+       "425           49      2767   734            282          True  \n",
+       "712         1312      2371  2940            128         False  \n",
+       "339          582      3493  2567            278          True  \n",
+       "435         1122     11547   831            693          True  \n",
+       "141         1248      8249  2702            498          True  \n",
+       "175         1034     14898   373            589         False  \n",
+       "75           782     15008  1867            518         False  "
       ],
       "text/html": [
        "<div>\n",
@@ -906,193 +906,193 @@
        "  </thead>\n",
        "  <tbody>\n",
        "    <tr>\n",
-       "      <th>247</th>\n",
-       "      <td>2007_01</td>\n",
-       "      <td>Aviton Gocent</td>\n",
-       "      <td>G</td>\n",
-       "      <td>1327</td>\n",
-       "      <td>P</td>\n",
-       "      <td>Pakistan</td>\n",
-       "      <td>China</td>\n",
-       "      <td>79</td>\n",
-       "      <td>True</td>\n",
-       "      <td>True</td>\n",
-       "      <td>518</td>\n",
-       "      <td>133</td>\n",
-       "      <td>8354</td>\n",
-       "      <td>951</td>\n",
-       "      <td>666</td>\n",
-       "      <td>True</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>455</th>\n",
-       "      <td>9129_01</td>\n",
-       "      <td>Hardy Graneyes</td>\n",
-       "      <td>H</td>\n",
-       "      <td>487</td>\n",
-       "      <td>P</td>\n",
-       "      <td>Philippines</td>\n",
-       "      <td>China</td>\n",
-       "      <td>50</td>\n",
-       "      <td>False</td>\n",
-       "      <td>False</td>\n",
-       "      <td>144</td>\n",
-       "      <td>556</td>\n",
-       "      <td>13752</td>\n",
-       "      <td>789</td>\n",
-       "      <td>664</td>\n",
-       "      <td>True</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>939</th>\n",
-       "      <td>8687_01</td>\n",
-       "      <td>Annon Cartiz</td>\n",
-       "      <td>C</td>\n",
-       "      <td>335</td>\n",
-       "      <td>P</td>\n",
-       "      <td>China</td>\n",
-       "      <td>Canada</td>\n",
+       "      <th>80</th>\n",
+       "      <td>4977_02</td>\n",
+       "      <td>Nicey Merce</td>\n",
+       "      <td>B</td>\n",
+       "      <td>62</td>\n",
+       "      <td>S</td>\n",
+       "      <td>Sweden</td>\n",
+       "      <td>Indonesia</td>\n",
        "      <td>39</td>\n",
        "      <td>False</td>\n",
-       "      <td>True</td>\n",
-       "      <td>1554</td>\n",
-       "      <td>918</td>\n",
-       "      <td>1162</td>\n",
-       "      <td>144</td>\n",
-       "      <td>0</td>\n",
+       "      <td>False</td>\n",
+       "      <td>1293</td>\n",
+       "      <td>379</td>\n",
+       "      <td>8770</td>\n",
+       "      <td>2106</td>\n",
+       "      <td>508</td>\n",
        "      <td>False</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>995</th>\n",
-       "      <td>6802_01</td>\n",
-       "      <td>Eleb Disteady</td>\n",
-       "      <td>G</td>\n",
-       "      <td>1310</td>\n",
+       "      <th>318</th>\n",
+       "      <td>4001_05</td>\n",
+       "      <td>Brancy Lowelliott</td>\n",
+       "      <td>C</td>\n",
+       "      <td>975</td>\n",
        "      <td>S</td>\n",
-       "      <td>Bosnia and Herzegovina</td>\n",
+       "      <td>Canada</td>\n",
+       "      <td>Portugal</td>\n",
+       "      <td>58</td>\n",
+       "      <td>True</td>\n",
+       "      <td>True</td>\n",
+       "      <td>1063</td>\n",
+       "      <td>249</td>\n",
+       "      <td>6181</td>\n",
+       "      <td>2240</td>\n",
+       "      <td>85</td>\n",
+       "      <td>True</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>538</th>\n",
+       "      <td>2798_01</td>\n",
+       "      <td>Furudra Timleplet</td>\n",
+       "      <td>D</td>\n",
+       "      <td>662</td>\n",
+       "      <td>S</td>\n",
+       "      <td>Russia</td>\n",
        "      <td>Brazil</td>\n",
+       "      <td>52</td>\n",
+       "      <td>True</td>\n",
+       "      <td>False</td>\n",
+       "      <td>1411</td>\n",
+       "      <td>28</td>\n",
+       "      <td>1404</td>\n",
+       "      <td>1152</td>\n",
+       "      <td>97</td>\n",
+       "      <td>True</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>425</th>\n",
+       "      <td>3040_01</td>\n",
+       "      <td>Nilly Purle</td>\n",
+       "      <td>A</td>\n",
+       "      <td>1057</td>\n",
+       "      <td>P</td>\n",
+       "      <td>United States</td>\n",
+       "      <td>Philippines</td>\n",
        "      <td>61</td>\n",
        "      <td>True</td>\n",
-       "      <td>True</td>\n",
-       "      <td>1569</td>\n",
-       "      <td>106</td>\n",
-       "      <td>8090</td>\n",
-       "      <td>2915</td>\n",
-       "      <td>680</td>\n",
+       "      <td>False</td>\n",
+       "      <td>844</td>\n",
+       "      <td>49</td>\n",
+       "      <td>2767</td>\n",
+       "      <td>734</td>\n",
+       "      <td>282</td>\n",
        "      <td>True</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>254</th>\n",
-       "      <td>0689_01</td>\n",
-       "      <td>Chard Motive</td>\n",
-       "      <td>F</td>\n",
-       "      <td>1241</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Ecuador</td>\n",
-       "      <td>Greece</td>\n",
-       "      <td>35</td>\n",
-       "      <td>False</td>\n",
-       "      <td>False</td>\n",
-       "      <td>1101</td>\n",
-       "      <td>406</td>\n",
-       "      <td>11734</td>\n",
-       "      <td>1212</td>\n",
-       "      <td>375</td>\n",
-       "      <td>True</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>483</th>\n",
-       "      <td>4885_01</td>\n",
-       "      <td>Jagles Bre</td>\n",
-       "      <td>B</td>\n",
-       "      <td>567</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Nicaragua</td>\n",
-       "      <td>Vietnam</td>\n",
-       "      <td>25</td>\n",
-       "      <td>True</td>\n",
-       "      <td>False</td>\n",
-       "      <td>1463</td>\n",
-       "      <td>34</td>\n",
-       "      <td>3320</td>\n",
-       "      <td>280</td>\n",
-       "      <td>431</td>\n",
-       "      <td>True</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>359</th>\n",
-       "      <td>3641_02</td>\n",
-       "      <td>Lilasa Powery</td>\n",
-       "      <td>D</td>\n",
-       "      <td>103</td>\n",
-       "      <td>P</td>\n",
-       "      <td>Ukraine</td>\n",
-       "      <td>France</td>\n",
-       "      <td>13</td>\n",
-       "      <td>True</td>\n",
-       "      <td>False</td>\n",
-       "      <td>1276</td>\n",
-       "      <td>479</td>\n",
-       "      <td>10598</td>\n",
-       "      <td>2927</td>\n",
-       "      <td>659</td>\n",
-       "      <td>True</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>214</th>\n",
-       "      <td>8175_01</td>\n",
-       "      <td>Terope Geraing</td>\n",
+       "      <th>712</th>\n",
+       "      <td>5097_01</td>\n",
+       "      <td>Hughan Peterstarks</td>\n",
        "      <td>H</td>\n",
-       "      <td>1226</td>\n",
+       "      <td>663</td>\n",
        "      <td>P</td>\n",
-       "      <td>Latvia</td>\n",
-       "      <td>Russia</td>\n",
-       "      <td>54</td>\n",
+       "      <td>Mexico</td>\n",
+       "      <td>Mexico</td>\n",
+       "      <td>21</td>\n",
        "      <td>True</td>\n",
+       "      <td>True</td>\n",
+       "      <td>253</td>\n",
+       "      <td>1312</td>\n",
+       "      <td>2371</td>\n",
+       "      <td>2940</td>\n",
+       "      <td>128</td>\n",
        "      <td>False</td>\n",
-       "      <td>574</td>\n",
-       "      <td>301</td>\n",
-       "      <td>14041</td>\n",
-       "      <td>929</td>\n",
-       "      <td>166</td>\n",
-       "      <td>True</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>868</th>\n",
-       "      <td>0255_01</td>\n",
-       "      <td>Ashir Mingious</td>\n",
-       "      <td>D</td>\n",
-       "      <td>941</td>\n",
+       "      <th>339</th>\n",
+       "      <td>1323_01</td>\n",
+       "      <td>Jilla Gamberson</td>\n",
+       "      <td>A</td>\n",
+       "      <td>589</td>\n",
        "      <td>S</td>\n",
        "      <td>Nigeria</td>\n",
-       "      <td>Germany</td>\n",
-       "      <td>50</td>\n",
+       "      <td>Ghana</td>\n",
+       "      <td>49</td>\n",
        "      <td>False</td>\n",
-       "      <td>True</td>\n",
-       "      <td>1155</td>\n",
-       "      <td>1156</td>\n",
-       "      <td>12846</td>\n",
-       "      <td>1180</td>\n",
-       "      <td>426</td>\n",
+       "      <td>False</td>\n",
+       "      <td>185</td>\n",
+       "      <td>582</td>\n",
+       "      <td>3493</td>\n",
+       "      <td>2567</td>\n",
+       "      <td>278</td>\n",
        "      <td>True</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>443</th>\n",
-       "      <td>1353_02</td>\n",
-       "      <td>Beant Tepie</td>\n",
-       "      <td>E</td>\n",
-       "      <td>1295</td>\n",
+       "      <th>435</th>\n",
+       "      <td>0863_02</td>\n",
+       "      <td>Lynez Walkerez</td>\n",
+       "      <td>B</td>\n",
+       "      <td>221</td>\n",
+       "      <td>S</td>\n",
+       "      <td>Indonesia</td>\n",
+       "      <td>China</td>\n",
+       "      <td>6</td>\n",
+       "      <td>True</td>\n",
+       "      <td>True</td>\n",
+       "      <td>1495</td>\n",
+       "      <td>1122</td>\n",
+       "      <td>11547</td>\n",
+       "      <td>831</td>\n",
+       "      <td>693</td>\n",
+       "      <td>True</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>141</th>\n",
+       "      <td>4246_01</td>\n",
+       "      <td>Isaacy Hamberterry</td>\n",
+       "      <td>D</td>\n",
+       "      <td>1358</td>\n",
        "      <td>P</td>\n",
        "      <td>China</td>\n",
-       "      <td>Poland</td>\n",
-       "      <td>18</td>\n",
+       "      <td>Indonesia</td>\n",
+       "      <td>58</td>\n",
+       "      <td>True</td>\n",
+       "      <td>True</td>\n",
+       "      <td>770</td>\n",
+       "      <td>1248</td>\n",
+       "      <td>8249</td>\n",
+       "      <td>2702</td>\n",
+       "      <td>498</td>\n",
+       "      <td>True</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>175</th>\n",
+       "      <td>3000_01</td>\n",
+       "      <td>Therta Spencervan</td>\n",
+       "      <td>F</td>\n",
+       "      <td>393</td>\n",
+       "      <td>S</td>\n",
+       "      <td>China</td>\n",
+       "      <td>China</td>\n",
+       "      <td>22</td>\n",
        "      <td>True</td>\n",
        "      <td>False</td>\n",
-       "      <td>903</td>\n",
-       "      <td>738</td>\n",
-       "      <td>1666</td>\n",
-       "      <td>1843</td>\n",
-       "      <td>596</td>\n",
+       "      <td>581</td>\n",
+       "      <td>1034</td>\n",
+       "      <td>14898</td>\n",
+       "      <td>373</td>\n",
+       "      <td>589</td>\n",
+       "      <td>False</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>75</th>\n",
+       "      <td>2647_01</td>\n",
+       "      <td>Janney Johnsby</td>\n",
+       "      <td>D</td>\n",
+       "      <td>413</td>\n",
+       "      <td>P</td>\n",
+       "      <td>China</td>\n",
+       "      <td>Russia</td>\n",
+       "      <td>1</td>\n",
+       "      <td>True</td>\n",
+       "      <td>True</td>\n",
+       "      <td>11</td>\n",
+       "      <td>782</td>\n",
+       "      <td>15008</td>\n",
+       "      <td>1867</td>\n",
+       "      <td>518</td>\n",
        "      <td>False</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
@@ -1100,18 +1100,18 @@
        "</div>"
       ]
      },
-     "execution_count": 33,
+     "execution_count": 8,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "execution_count": 33
+   "execution_count": 8
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.699552900Z",
-     "start_time": "2024-11-07T19:15:10.631422Z"
+     "end_time": "2024-11-24T17:10:49.022890Z",
+     "start_time": "2024-11-24T17:10:49.020293Z"
     }
    },
    "cell_type": "code",
@@ -1123,8 +1123,8 @@
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.716032200Z",
-     "start_time": "2024-11-07T19:15:10.715316Z"
+     "end_time": "2024-11-24T17:10:49.127465Z",
+     "start_time": "2024-11-24T17:10:49.119618Z"
     }
    },
    "cell_type": "code",
@@ -1198,13 +1198,13 @@
      ]
     }
    ],
-   "execution_count": 34
+   "execution_count": 9
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.724443700Z",
-     "start_time": "2024-11-07T19:15:10.867927Z"
+     "end_time": "2024-11-24T17:10:49.315710Z",
+     "start_time": "2024-11-24T17:10:49.301044Z"
     }
    },
    "cell_type": "code",
@@ -1344,18 +1344,18 @@
        "</div>"
       ]
      },
-     "execution_count": 35,
+     "execution_count": 10,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "execution_count": 35
+   "execution_count": 10
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.727909100Z",
-     "start_time": "2024-11-07T19:15:10.958137Z"
+     "end_time": "2024-11-24T17:10:49.453222Z",
+     "start_time": "2024-11-24T17:10:49.446466Z"
     }
    },
    "cell_type": "code",
@@ -1374,18 +1374,18 @@
        "Name: count, dtype: int64"
       ]
      },
-     "execution_count": 36,
+     "execution_count": 11,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "execution_count": 36
+   "execution_count": 11
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.728911300Z",
-     "start_time": "2024-11-07T19:15:11.075365Z"
+     "end_time": "2024-11-24T17:10:49.776602Z",
+     "start_time": "2024-11-24T17:10:49.573025Z"
     }
    },
    "cell_type": "code",
@@ -1409,13 +1409,13 @@
      "output_type": "display_data"
     }
    ],
-   "execution_count": 37
+   "execution_count": 12
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.729912100Z",
-     "start_time": "2024-11-07T19:15:11.280243Z"
+     "end_time": "2024-11-24T17:10:49.812356Z",
+     "start_time": "2024-11-24T17:10:49.806350Z"
     }
    },
    "cell_type": "code",
@@ -1444,13 +1444,13 @@
      ]
     }
    ],
-   "execution_count": 38
+   "execution_count": 13
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.729912100Z",
-     "start_time": "2024-11-07T19:15:11.416454Z"
+     "end_time": "2024-11-24T17:10:52.364079Z",
+     "start_time": "2024-11-24T17:10:49.859718Z"
     }
    },
    "cell_type": "code",
@@ -1484,7 +1484,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "C:\\Users\\Lais_Ziegler\\AppData\\Local\\Temp\\ipykernel_53464\\2282825136.py:9: FutureWarning: \n",
+      "C:\\Users\\Lais_Ziegler\\AppData\\Local\\Temp\\ipykernel_179044\\2282825136.py:9: FutureWarning: \n",
       "\n",
       "Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n",
       "\n",
@@ -1505,7 +1505,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "C:\\Users\\Lais_Ziegler\\AppData\\Local\\Temp\\ipykernel_53464\\2282825136.py:9: FutureWarning: \n",
+      "C:\\Users\\Lais_Ziegler\\AppData\\Local\\Temp\\ipykernel_179044\\2282825136.py:9: FutureWarning: \n",
       "\n",
       "Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n",
       "\n",
@@ -1526,7 +1526,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "C:\\Users\\Lais_Ziegler\\AppData\\Local\\Temp\\ipykernel_53464\\2282825136.py:9: FutureWarning: \n",
+      "C:\\Users\\Lais_Ziegler\\AppData\\Local\\Temp\\ipykernel_179044\\2282825136.py:9: FutureWarning: \n",
       "\n",
       "Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n",
       "\n",
@@ -1547,7 +1547,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "C:\\Users\\Lais_Ziegler\\AppData\\Local\\Temp\\ipykernel_53464\\2282825136.py:9: FutureWarning: \n",
+      "C:\\Users\\Lais_Ziegler\\AppData\\Local\\Temp\\ipykernel_179044\\2282825136.py:9: FutureWarning: \n",
       "\n",
       "Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n",
       "\n",
@@ -1565,13 +1565,13 @@
      "output_type": "display_data"
     }
    ],
-   "execution_count": 39
+   "execution_count": 14
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.730910200Z",
-     "start_time": "2024-11-07T19:15:13.883531Z"
+     "end_time": "2024-11-24T17:10:52.879768Z",
+     "start_time": "2024-11-24T17:10:52.375534Z"
     }
    },
    "cell_type": "code",
@@ -1598,13 +1598,13 @@
      "output_type": "display_data"
     }
    ],
-   "execution_count": 40
+   "execution_count": 15
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.730910200Z",
-     "start_time": "2024-11-07T19:15:14.342560Z"
+     "end_time": "2024-11-24T17:10:53.378253Z",
+     "start_time": "2024-11-24T17:10:52.917134Z"
     }
    },
    "cell_type": "code",
@@ -1640,7 +1640,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "C:\\Users\\Lais_Ziegler\\AppData\\Local\\Temp\\ipykernel_53464\\2609592333.py:3: FutureWarning: \n",
+      "C:\\Users\\Lais_Ziegler\\AppData\\Local\\Temp\\ipykernel_179044\\2609592333.py:3: FutureWarning: \n",
       "\n",
       "Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n",
       "\n",
@@ -1671,7 +1671,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "C:\\Users\\Lais_Ziegler\\AppData\\Local\\Temp\\ipykernel_53464\\2609592333.py:16: FutureWarning: \n",
+      "C:\\Users\\Lais_Ziegler\\AppData\\Local\\Temp\\ipykernel_179044\\2609592333.py:16: FutureWarning: \n",
       "\n",
       "Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n",
       "\n",
@@ -1699,13 +1699,13 @@
      "output_type": "display_data"
     }
    ],
-   "execution_count": 41
+   "execution_count": 16
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.730910200Z",
-     "start_time": "2024-11-07T19:15:14.823790Z"
+     "end_time": "2024-11-24T17:10:53.414909Z",
+     "start_time": "2024-11-24T17:10:53.388506Z"
     }
    },
    "cell_type": "code",
@@ -1845,13 +1845,13 @@
      ]
     }
    ],
-   "execution_count": 42
+   "execution_count": 17
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:04.730910200Z",
-     "start_time": "2024-11-07T19:20:56.892502Z"
+     "end_time": "2024-11-24T17:10:54.174828Z",
+     "start_time": "2024-11-24T17:10:53.434095Z"
     }
    },
    "cell_type": "code",
@@ -4051,13 +4051,13 @@
      "output_type": "display_data"
     }
    ],
-   "execution_count": 50
+   "execution_count": 18
   },
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-11-08T17:06:45.984296Z",
-     "start_time": "2024-11-08T17:06:45.816620Z"
+     "end_time": "2024-11-24T17:10:55.766366Z",
+     "start_time": "2024-11-24T17:10:54.366390Z"
     }
    },
    "cell_type": "code",
@@ -4085,7 +4085,7 @@
      "traceback": [
       "\u001B[1;31m---------------------------------------------------------------------------\u001B[0m",
       "\u001B[1;31mKeyError\u001B[0m                                  Traceback (most recent call last)",
-      "Cell \u001B[1;32mIn[52], line 2\u001B[0m\n\u001B[0;32m      1\u001B[0m \u001B[38;5;66;03m# One-Hot Encoding para Procedência (exemplo com pandas get_dummies)\u001B[39;00m\n\u001B[1;32m----> 2\u001B[0m df \u001B[38;5;241m=\u001B[39m \u001B[43mpd\u001B[49m\u001B[38;5;241;43m.\u001B[39;49m\u001B[43mget_dummies\u001B[49m\u001B[43m(\u001B[49m\u001B[43mdf\u001B[49m\u001B[43m,\u001B[49m\u001B[43m \u001B[49m\u001B[43mcolumns\u001B[49m\u001B[38;5;241;43m=\u001B[39;49m\u001B[43m[\u001B[49m\u001B[38;5;124;43m'\u001B[39;49m\u001B[38;5;124;43mProcedência\u001B[39;49m\u001B[38;5;124;43m'\u001B[39;49m\u001B[43m]\u001B[49m\u001B[43m,\u001B[49m\u001B[43m \u001B[49m\u001B[43mdrop_first\u001B[49m\u001B[38;5;241;43m=\u001B[39;49m\u001B[38;5;28;43;01mTrue\u001B[39;49;00m\u001B[43m)\u001B[49m\n\u001B[0;32m      4\u001B[0m \u001B[38;5;66;03m# Imputação de NaN com média (ou escolha outro método)\u001B[39;00m\n\u001B[0;32m      5\u001B[0m imputer \u001B[38;5;241m=\u001B[39m SimpleImputer(strategy\u001B[38;5;241m=\u001B[39m\u001B[38;5;124m'\u001B[39m\u001B[38;5;124mmean\u001B[39m\u001B[38;5;124m'\u001B[39m)\n",
+      "Cell \u001B[1;32mIn[19], line 2\u001B[0m\n\u001B[0;32m      1\u001B[0m \u001B[38;5;66;03m# One-Hot Encoding para Procedência (exemplo com pandas get_dummies)\u001B[39;00m\n\u001B[1;32m----> 2\u001B[0m df \u001B[38;5;241m=\u001B[39m \u001B[43mpd\u001B[49m\u001B[38;5;241;43m.\u001B[39;49m\u001B[43mget_dummies\u001B[49m\u001B[43m(\u001B[49m\u001B[43mdf\u001B[49m\u001B[43m,\u001B[49m\u001B[43m \u001B[49m\u001B[43mcolumns\u001B[49m\u001B[38;5;241;43m=\u001B[39;49m\u001B[43m[\u001B[49m\u001B[38;5;124;43m'\u001B[39;49m\u001B[38;5;124;43mProcedência\u001B[39;49m\u001B[38;5;124;43m'\u001B[39;49m\u001B[43m]\u001B[49m\u001B[43m,\u001B[49m\u001B[43m \u001B[49m\u001B[43mdrop_first\u001B[49m\u001B[38;5;241;43m=\u001B[39;49m\u001B[38;5;28;43;01mTrue\u001B[39;49;00m\u001B[43m)\u001B[49m\n\u001B[0;32m      4\u001B[0m \u001B[38;5;66;03m# Imputação de NaN com média (ou escolha outro método)\u001B[39;00m\n\u001B[0;32m      5\u001B[0m imputer \u001B[38;5;241m=\u001B[39m SimpleImputer(strategy\u001B[38;5;241m=\u001B[39m\u001B[38;5;124m'\u001B[39m\u001B[38;5;124mmean\u001B[39m\u001B[38;5;124m'\u001B[39m)\n",
       "File \u001B[1;32m~\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pandas\\core\\reshape\\encoding.py:169\u001B[0m, in \u001B[0;36mget_dummies\u001B[1;34m(data, prefix, prefix_sep, dummy_na, columns, sparse, drop_first, dtype)\u001B[0m\n\u001B[0;32m    167\u001B[0m     \u001B[38;5;28;01mraise\u001B[39;00m \u001B[38;5;167;01mTypeError\u001B[39;00m(\u001B[38;5;124m\"\u001B[39m\u001B[38;5;124mInput must be a list-like for parameter `columns`\u001B[39m\u001B[38;5;124m\"\u001B[39m)\n\u001B[0;32m    168\u001B[0m \u001B[38;5;28;01melse\u001B[39;00m:\n\u001B[1;32m--> 169\u001B[0m     data_to_encode \u001B[38;5;241m=\u001B[39m \u001B[43mdata\u001B[49m\u001B[43m[\u001B[49m\u001B[43mcolumns\u001B[49m\u001B[43m]\u001B[49m\n\u001B[0;32m    171\u001B[0m \u001B[38;5;66;03m# validate prefixes and separator to avoid silently dropping cols\u001B[39;00m\n\u001B[0;32m    172\u001B[0m \u001B[38;5;28;01mdef\u001B[39;00m \u001B[38;5;21mcheck_len\u001B[39m(item, name: \u001B[38;5;28mstr\u001B[39m):\n",
       "File \u001B[1;32m~\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pandas\\core\\frame.py:4108\u001B[0m, in \u001B[0;36mDataFrame.__getitem__\u001B[1;34m(self, key)\u001B[0m\n\u001B[0;32m   4106\u001B[0m     \u001B[38;5;28;01mif\u001B[39;00m is_iterator(key):\n\u001B[0;32m   4107\u001B[0m         key \u001B[38;5;241m=\u001B[39m \u001B[38;5;28mlist\u001B[39m(key)\n\u001B[1;32m-> 4108\u001B[0m     indexer \u001B[38;5;241m=\u001B[39m \u001B[38;5;28;43mself\u001B[39;49m\u001B[38;5;241;43m.\u001B[39;49m\u001B[43mcolumns\u001B[49m\u001B[38;5;241;43m.\u001B[39;49m\u001B[43m_get_indexer_strict\u001B[49m\u001B[43m(\u001B[49m\u001B[43mkey\u001B[49m\u001B[43m,\u001B[49m\u001B[43m \u001B[49m\u001B[38;5;124;43m\"\u001B[39;49m\u001B[38;5;124;43mcolumns\u001B[39;49m\u001B[38;5;124;43m\"\u001B[39;49m\u001B[43m)\u001B[49m[\u001B[38;5;241m1\u001B[39m]\n\u001B[0;32m   4110\u001B[0m \u001B[38;5;66;03m# take() does not accept boolean indexers\u001B[39;00m\n\u001B[0;32m   4111\u001B[0m \u001B[38;5;28;01mif\u001B[39;00m \u001B[38;5;28mgetattr\u001B[39m(indexer, \u001B[38;5;124m\"\u001B[39m\u001B[38;5;124mdtype\u001B[39m\u001B[38;5;124m\"\u001B[39m, \u001B[38;5;28;01mNone\u001B[39;00m) \u001B[38;5;241m==\u001B[39m \u001B[38;5;28mbool\u001B[39m:\n",
       "File \u001B[1;32m~\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pandas\\core\\indexes\\base.py:6200\u001B[0m, in \u001B[0;36mIndex._get_indexer_strict\u001B[1;34m(self, key, axis_name)\u001B[0m\n\u001B[0;32m   6197\u001B[0m \u001B[38;5;28;01melse\u001B[39;00m:\n\u001B[0;32m   6198\u001B[0m     keyarr, indexer, new_indexer \u001B[38;5;241m=\u001B[39m \u001B[38;5;28mself\u001B[39m\u001B[38;5;241m.\u001B[39m_reindex_non_unique(keyarr)\n\u001B[1;32m-> 6200\u001B[0m \u001B[38;5;28;43mself\u001B[39;49m\u001B[38;5;241;43m.\u001B[39;49m\u001B[43m_raise_if_missing\u001B[49m\u001B[43m(\u001B[49m\u001B[43mkeyarr\u001B[49m\u001B[43m,\u001B[49m\u001B[43m \u001B[49m\u001B[43mindexer\u001B[49m\u001B[43m,\u001B[49m\u001B[43m \u001B[49m\u001B[43maxis_name\u001B[49m\u001B[43m)\u001B[49m\n\u001B[0;32m   6202\u001B[0m keyarr \u001B[38;5;241m=\u001B[39m \u001B[38;5;28mself\u001B[39m\u001B[38;5;241m.\u001B[39mtake(indexer)\n\u001B[0;32m   6203\u001B[0m \u001B[38;5;28;01mif\u001B[39;00m \u001B[38;5;28misinstance\u001B[39m(key, Index):\n\u001B[0;32m   6204\u001B[0m     \u001B[38;5;66;03m# GH 42790 - Preserve name from an Index\u001B[39;00m\n",
@@ -4094,7 +4094,7 @@
      ]
     }
    ],
-   "execution_count": 52
+   "execution_count": 19
   }
  ],
  "metadata": {
